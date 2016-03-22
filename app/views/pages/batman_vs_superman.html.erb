@@ -1,10 +1,51 @@
-
+<div class="container">
 <div style="width: 50%; float:left">
-   	<button style="position: absolute;"><%= link_to 'batman', pages_batman_path %></button>
-   <img src="https://i.kinja-img.com/gawker-media/image/upload/ltjuhuqmei36srteldly.jpg">
+	<div class="heroe_container">
+	   	
+	<button><%= link_to 'superman', pages_superman_path %></button>
+		
+		<%= form_tag pages_save_voto_path, method: "post" do %>
+		<div class="form-group">
+			<%= label_tag :heroe, "Nombre:" %>
+			<%= text_field_tag :heroe, params[:heroe], class: "form-control" %>
+		</div>
+
+		<div class="form-group">
+			<%= label_tag :email, "email:" %>
+			<%= text_field_tag :email, params[:email], class: "form-control" %>
+		</div>
+		<div class="form-group">
+			<%= submit_tag "Enviar", class: "btn btn-success" %>
+		</div>
+
+		<% end %>
+		<img src="https://i.kinja-img.com/gawker-media/image/upload/ltjuhuqmei36srteldly.jpg">
+	</div>
+   
 </div>
 
 <div style="width: 50%; float:right">
-	<button style="position: absolute;"><%= link_to 'superman', pages_superman_path %></button>
-   <img src="http://jumphawk.jovemnerd.com.br/wp-content/uploads/DSC5762-AO5.jpg">
+	<div class="heroe_container">
+		<button><%= link_to 'batman', pages_batman_path %></button>
+		
+
+		<%= form_tag pages_save_voto_path, method: "post" do %>
+		<div class="form-group">
+			<%= label_tag :heroe, "Nombre:" %>
+			<%= text_field_tag :heroe, params[:heroe], class: "form-control" %>
+		</div>
+
+		<div class="form-group">
+			<%= label_tag :email, "email:" %>
+			<%= text_field_tag :email, params[:email], class: "form-control" %>
+		</div>
+		<div class="form-group">
+			<%= submit_tag "Enviar", class: "btn btn-success" %>
+		</div>
+
+		<% end %>
+
+	   <img src="http://jumphawk.jovemnerd.com.br/wp-content/uploads/DSC5762-AO5.jpg">
+   </div>
+</div>
 </div>
