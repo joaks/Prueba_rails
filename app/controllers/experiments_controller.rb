@@ -9,4 +9,9 @@ class ExperimentsController < ApplicationController
 
   def page3
   end
+  
+  private
+  def var
+  	@counter =100
+  end
 end
